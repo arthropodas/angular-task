@@ -1,5 +1,21 @@
 <app-header></app-header>
 <p>layout works!</p>
 <h1>{{title}}</h1>
+<!-- layout.component.html -->
+<form (submit)="onSubmit()">
+    <label>Name:</label>
+    <input type="text" name="name">
+    <label>Address:</label>
+    <input type="text" name="address">
+    <label>Education:</label>
+    <input type="text" name="education">
+    <button type="submit">Submit</button>
+</form>
+<button routerLink="/details">Show Details</button>
+<nav>
+
+    <a routerLink="/details" routerLinkActive="active" ariaCurrentWhenActive="page">Second Component</a>
+</nav>
 
 <app-footer></app-footer>
+<router-outlet></router-outlet>
